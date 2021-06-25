@@ -1,0 +1,16 @@
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="4">
+    <agm-marker *ngFor="let i of stops"
+              [latitude]="i.latitude"
+              [longitude]="i.longitude" [agmFitBounds]="true"
+              [label]="{color: 'white', text: i.stopName}"></agm-marker>
+    <agm-polyline [strokeColor]="'#07b57a'">
+        <!-- <agm-polyline-point [latitude]="latA" [longitude]="lngA">
+        </agm-polyline-point>
+        <agm-polyline-point [latitude]="latB" [longitude]="lngB">
+        </agm-polyline-point> -->
+        <ng-container *ngFor="let i of stops">
+            <agm-polyline-point [latitude]="i.latitude" [longitude]="i.longitude">
+            </agm-polyline-point>
+        </ng-container>
+    </agm-polyline>
+</agm-map>

@@ -1,0 +1,36 @@
+.flex-container {
+    display: flex;
+    max-height: 50rem;
+}
+
+.route-table {
+    width: 70%;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    background-color: #eed6d6;
+    overflow-y: scroll;
+}
+
+.route-create {
+    width: 40%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    background-color: #eed6d6;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    padding: 4px;
+}
+
+.topnav {
+    background-color: rgb(25, 51, 100);
+    overflow: hidden;
+}
+
+.topnav label {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Audiowide", sans-serif;
+  }

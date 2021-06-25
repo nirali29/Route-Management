@@ -1,0 +1,21 @@
+<div class="topnav">
+  <label> Router Baba </label>
+</div>
+<div class="flex-container">
+  <div class="route-table">
+    <app-route-list #table
+      [myRoutes]="myRoutes"
+      (mapCoords)="generatePolyline($event)">
+    </app-route-list>
+  </div>
+  <div class="route-create">
+    <app-route-create
+      (createEvent)="routeCreated($event)"
+      [updateForm]="false"></app-route-create>
+  </div>
+</div>
+<div>
+  <app-route-map
+    [stops]="mapCoords">
+  </app-route-map>
+</div>

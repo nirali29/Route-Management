@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<p-table #dt [value]="rows" [columns]="cols" selectionMode="single" [(selection)]="selectedRoute" dataKey="routeId" (onRowSelect)="onRowSelect($event)">
+    <ng-template pTemplate="caption">
+        <div class="table-title">
+            <div class="heading"><h2> My Route List </h2></div>
+            <div class="p-d-flex; export-button">
+                <button type="button" pButton pRipple (click)="dt.exportCSV()" class="btn"><i class="fa fa-download"></i>Export</button>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns" style="text-align:center; width: 2rem">
+                {{col.header}}
+            </th>
+            <th style="width:4rem"></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-myRoute >
+        <tr >
+            <td style="text-align:center">{{myRoute.routeId}}</td>
+            <td style="text-align:center">{{myRoute.routeName}}</td>
+            <td style="text-align:center">{{myRoute.direction}}</td>
+            <td style="text-align:center">{{myRoute.status}}</td>
+            <td style="text-align:center">{{myRoute.type}}</td>
+            <td style="text-align:center">{{myRoute.stops}}</td>
+            <td>
+                <button type="button" pButton pRipple icon="fas fa-trash-alt" (click)="deleteRow(myRoute.routeId)">Delete</button>
+                <button type="button" pButton pRipple icon="fas fa-trash-alt" (click)="op.show($event); updateRow(myRoute.routeId)">Update</button>
+                <button type="button" pButton pRipple icon="fas fa-trash-alt" (click)="generatePolyline(myRoute)">View Map</button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<p-overlayPanel #op [style]="{'text-align': 'center', 'background-color': 'cadetblue'}" [dismissable]="true" [showCloseIcon]="true">
+    <ng-template pTemplate>
+        <app-route-create
+            (createEvent)="routeCreated($event)"
+            [updateForm]="true"
+            [routeId]="selectedRouteId"
+            [inputRoute]="selectedRoute">
+        </app-route-create>
+    </ng-template>
+</p-overlayPanel>
