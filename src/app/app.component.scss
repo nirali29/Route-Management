@@ -1,6 +1,8 @@
 .flex-container {
     display: flex;
     max-height: 50rem;
+    width: 92%;
+    margin: 0 auto;
 }
 
 .route-table {
@@ -13,7 +15,7 @@
 
 .route-create {
     width: 40%;
-    margin-left: 1rem;
+    margin-left: 2rem;
     margin-top: 1rem;
     background-color: #eed6d6;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
@@ -32,5 +34,11 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 25px;
-    font-family: "Audiowide", sans-serif;
+    font-family: 'Bree Serif', serif;
+  }
+
+  .map {
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 2rem;
   }

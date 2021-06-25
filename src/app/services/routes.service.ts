@@ -31,6 +31,13 @@ export class RoutesService {
     console.log(ROUTES);
   }
 
+  deleteRow(id: string) {
+    let index = ROUTES.map(function(e) { return e.routeId; }).indexOf(id);
+    if (index > -1) {
+      ROUTES.splice(index, 1);
+    }
+  }
+
   updateRoute(id: string, name: string, direction: string, status: string, type: string, stops: any[]) {
     var foundIndex = ROUTES.findIndex(x => x.routeId == id);
     let row = {

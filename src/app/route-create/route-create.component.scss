@@ -1,5 +1,3 @@
-// @import '../node_modules/primeng/resources/primeng.min.css';
-
 .card {
     background-color: aqua;
 }
@@ -8,6 +6,7 @@
     display: flex;
     background-color: #ffc4c4;
     font-family: 'Adamina';
+    padding-left: 10px;
 }
 
 * {
@@ -38,9 +37,9 @@
   
   
   .container {
-    // border-radius: 5px;
-    padding: 20px;
+    padding-left: 40px;
     width: 100%;
+    padding-top: 30px;
   }
   
   .col-25 {
@@ -84,4 +83,9 @@
     z-index: '2000';
     background-color: white;
     padding: 10px;
+}
+
+input[type="submit"]{
+    background-color: #5e5e5e;
+    color: white;
 }

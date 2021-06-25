@@ -1,5 +1,6 @@
 <div class="create-title">
-    <h2> Create Route </h2>
+    <h2 *ngIf="!updateForm"> Create Route </h2>
+    <h2 *ngIf="updateForm"> Update Route </h2>
 </div>
 <div class="container">
     <form #createForm="ngForm" (ngSubmit) = "createRoute(createForm.value)" ngNativeValidate>
@@ -49,17 +50,16 @@
           <label for="stops">Stops</label>
         </div>
         <div class="col-75">
-            <p-multiSelect  class="multiselect-dropdown" name="stops" [options]="stops" [(ngModel)]="selectedStops" optionLabel="stopName" optionValue="stopId"></p-multiSelect>
+            <p-multiSelect  class="multiselect-dropdown" name="stops" [options]="stops" [(ngModel)]="selectedStops" optionLabel="stopId" optionValue="stopId"></p-multiSelect>
         </div>
       </div>
     <div class="button-row">
       <input type="submit" value="Submit" *ngIf="!updateForm">
       <input type="button" *ngIf="updateForm" value="Update" (click)="updateRoute()">
-      <!-- <button *ngIf="updateForm" (click)="updateRoute()">Update</button> -->
-      <label> OR </label>
-    <input type="file"
-           id="file" accept=".csv"
-           (change)="handleFileInput($event.target.files)">
+      <label *ngIf="!updateForm"> OR </label>
+        <input type="file" *ngIf="!updateForm"
+            id="file" accept=".csv"
+            (change)="handleFileInput($event.target.files)">
     </div>
     </form>
 </div>

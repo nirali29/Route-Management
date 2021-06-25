@@ -38,8 +38,6 @@ export class RouteListComponent implements OnInit {
   }
 
   getRows() {
-    // this.routesService.getRoutes()
-    //       .subscribe(routes => this.myRoutes = routes);  
     this.rows = []; 
     this.myRoutes.forEach(route => {
       let row = {
@@ -56,28 +54,20 @@ export class RouteListComponent implements OnInit {
   }
 
   deleteRow(id: string) {
-    this.myRoutes = this.myRoutes.filter(row => {
-      return row.routeId !== id;
-    });
+    this.routesService.deleteRow(id);
     this.getRows();
   }
 
   updateRow(id: string) {
-    // this.panelVisible = true;
     this.selectedRouteId = id;
     this.selectedRoute = this.myRoutes.filter(route => {return route.routeId == id})[0];
   }
 
   routeCreated($event) {
-    // this.panelVisible = false;
     this.op.hide();
     this.routesService.getRoutes()
           .subscribe(routes => this.myRoutes = routes);
     this.getRows();
-  }
-
-  onRowSelect(event) {
-    console.log(event);
   }
 
   generatePolyline(route) {

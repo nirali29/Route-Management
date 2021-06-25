@@ -15,6 +15,7 @@ export class AppComponent {
   mapCoords: any[];
   @ViewChild('table', {static: false}) table: RouteListComponent;
   constructor(private routesService: RoutesService) {}
+  
   ngOnInit() {
       this.routesService.getRoutes()
           .subscribe(routes => this.myRoutes = routes);
