@@ -24,8 +24,8 @@ export var ROUTES: MyRoute[] = [
         { stopId: '101', stopName: 'Jaipur', latitude: 26.9124, longitude: 75.7873 }
     ]  },
     { routeId: '5', routeName: 'Route5', direction: 'Up', status: 'Active', type: 'AC', stops:[
-        {stopId: "101", stopName: "Stop1", latitude: 2423, longitude: 574745},
-        {stopId: "102", stopName: "Stop2", latitude: 2423, longitude: 574745}
+        { stopId: '101', stopName: 'Jaipur', latitude: 26.9124, longitude: 75.7873 },
+        { stopId: '102', stopName: 'Mumbai', latitude: 19.0760, longitude: 72.8777 }
     ]  },
     { routeId: '6', routeName: 'Route6', direction: 'Up', status: 'Active', type: 'AC', stops:[
         {stopId: "105", stopName: "Chennai", latitude: 13.0827, longitude: 80.2707},
