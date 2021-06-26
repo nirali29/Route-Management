@@ -1,0 +1,11 @@
+routeId,routeName,direction,status,type,stops
+11,Dr Nice,Up,Active,AC,101 105
+12,Narco,Down,Inactive,General,103 106
+13,Bombasto,Up,Active,AC,102 105
+14,Celeritas,Down,Inactive,General,104 106
+15,Magneta,Up,Active,AC,103 105
+16,RubberMan,Down,Inactive,General,105 106
+17,Dynama,Up,Active,AC,104 105
+18,Dr IQ,Down,Inactive,General,106 106
+19,Magma,Up,Active,AC,105 105
+20,Tornado,Down,Inactive,General,102 105
