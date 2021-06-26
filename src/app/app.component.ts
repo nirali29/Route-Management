@@ -10,7 +10,7 @@ import { RouteListComponent } from './route-list/route-list.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Router Baba';
+  title = 'Router Management';
   myRoutes: MyRoute[];
   mapCoords: any[];
   @ViewChild('table', {static: false}) table: RouteListComponent;
