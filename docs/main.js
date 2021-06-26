@@ -642,7 +642,7 @@ const _c0 = ["table"];
 class AppComponent {
     constructor(routesService) {
         this.routesService = routesService;
-        this.title = 'Router Baba';
+        this.title = 'Router Management';
     }
     ngOnInit() {
         this.routesService.getRoutes()
